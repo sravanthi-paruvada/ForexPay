@@ -24,6 +24,9 @@
 			**/constant/*,
 			**/exception/*
 		</sonar.coverage.exclusions>
+		<sonar.host.url>http://13.92.130.12:9000</sonar.host.url>
+  		<sonar.login>admin</sonar.login>
+  		<sonar.password>admin123</sonar.password>
 	</properties>
 
 	<dependencies>
@@ -69,11 +72,15 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus</id>
-			<url>http://52.172.39.32:8081/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <snapshotRepository>
+       <id>nexus</id>
+       <url>http://13.92.130.12:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+     <repository>
+       <id>nexus</id>
+       <url>http://13.92.130.12:8081/nexus/content/repositories/releases</url>
+    </repository>
+  </distributionManagement>
 
 	<build>
 		<plugins>
